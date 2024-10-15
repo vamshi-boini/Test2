@@ -1,7 +1,13 @@
 function Login(){
     return(
         <div>
-            <h2>This is login page</h2>
+        <center><h2>Login Page</h2></center>
+        <br/>
+        Enter UserName:<input type="text"/><br/>
+        Enter password:<input type="password"/><br/>
+        <br/>
+        <button type="submit">Submit</button>
+
         </div>
     )
 }
