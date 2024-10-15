@@ -1,29 +1,33 @@
-import {BrowserRouter, Route, Routes,Link} from 'react-router-dom';
-import Login from './Login';
-import About from './About';
-import Signup from './Signup';
+// import {useState} from 'react'
 
-function Header(){
-  return(
-    <ul>
-      <li><Link to="/login">Login</Link></li>
-      <li><Link to="/about">About</Link></li>
-      <li><Link to="/signup">Signup</Link></li>
-    </ul>
-  )
-}
-function App(){
-  return(
+// const App = () => {
+//   const[name,setName]=useState("Vamshi")
+//   return (
+//     <div>
+//       <center>
+//         <h1>{name}</h1>
+//         <br/>
+//         <button onClick={()=>setName("Boini Vamshi")}>useState</button>
+//       </center>
+//     </div>
+//   )
+// }
+
+// export default App
+
+import {useState} from 'react'
+
+const App = () => {
+  const [count,setCount]=useState(0);
+  return (
     <div>
-    <BrowserRouter>
-    <Header/>
-    <Routes>
-    <Route path="/" element={<Login/>}/>
-    <Route path="/signup" element={<Signup/>}/>
-    <Route path="/about" element={<About/>}/>
-    </Routes>
-    </BrowserRouter>
+      <center>
+        <h1>{count}</h1>
+        <br/>
+        <button onClick={()=>setCount(count+1)}>useState</button>
+      </center>
     </div>
   )
 }
-export default App;
+
+export default App
